@@ -1,16 +1,12 @@
-export const App = () => {
+import { BrowserRouter } from 'react-router-dom';
+import FilmRoutes from './FilmRoutes';
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <BrowserRouter>
+      <FilmRoutes />
+    </BrowserRouter>
   );
 };
+
+export default App;
