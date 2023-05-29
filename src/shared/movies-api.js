@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://api.themoviedb.org',
+  baseURL: 'https://api.themoviedb.org/3',
   params: {
     api_key: '248116f5568d54feca6593c74cdd2b90',
     language: 'en-US',
     include_adult: false,
+    page: 1,
   },
   headers: {
     accept: 'application/json',
@@ -13,17 +14,36 @@ const instance = axios.create({
 });
 
 export const getTrendingMovies = async () => {
-    const path = '/3/trending/movie/day';
-    const { data } = await instance.get(path);
-  
-    const moviesList = data.results.map(({ id, title, poster_path }) => {
-      const movieTitle = title.length > 25 ? `${title.substring(0, 22)}...` : title;
-      const src = poster_path
-        ? `https://image.tmdb.org/t/p/w500/${poster_path}`
-        : 'https://via.placeholder.com/200x300.png?text=No+Image';
-  
-      return { id, movieTitle, src };
-    });
-  
-    return moviesList;
-  };
+  const path = '/trending/movie/day';
+  const { data } = await instance.get(path);
+
+  const moviesList = data.results.map(({ id, title, poster_path }) => {
+    const movieTitle =
+      title.length > 25 ? `${title.substring(0, 22)}...` : title;
+    const src = poster_path
+      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+      : 'https://via.placeholder.com/200x300.png?text=No+Image';
+
+    return { id, movieTitle, src };
+  });
+
+  return moviesList;
+};
+
+export const getMovieByName = async query => {
+  const path = '/search/movie';
+  const { data } = await instance.get(path, {
+    params: { query: query }
+  });
+  const moviesList = data.results.map(({ id, name, title, poster_path }) => {
+    let movieTitle = title || name;
+    if (movieTitle.length > 25) {
+      movieTitle = movieTitle.substring(0, 22) + '...';
+    }
+    let src = poster_path
+      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+      : 'https://via.placeholder.com/200x300.png?text=No+Image';
+    return { id, movieTitle, src };
+  });
+  return moviesList;
+};

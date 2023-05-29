@@ -1,20 +1,22 @@
 .list {
-    margin-left: 20px;
+    margin-left: 40px;
+    margin-bottom: 60px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     gap: 40px;
 }
 .item {
+    background-color: rgb(50, 49, 57);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     color: #ffffff;
     font-size: 14px;
-    box-shadow: 4px 4px 4px 0px rgba(255, 255, 255, 0.649);
+    box-shadow: 0px 4px 4px 4px rgba(174, 172, 172, 0.649);
 }
 .item:hover,
 .item:focus {
     color: rgb(0, 185, 185);
-    box-shadow: 12px 12px 12px 0px rgba(255, 255, 255, 0.649), 0px 0px;
+    box-shadow: 0px 12px 12px 8px rgba(255, 255, 255, 0.649), 0px 0px;
 }
 .link {
     display: flex;
@@ -29,6 +31,7 @@
     object-fit: cover;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 0px 4px 4px 4px rgba(24, 24, 24, 0.649);
 }
 .subtitle {
     margin-bottom: 16px;
