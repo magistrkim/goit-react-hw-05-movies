@@ -1,10 +1,10 @@
 import { BrowserRouter } from 'react-router-dom';
-import FilmRoutes from './FilmRoutes';
+import MoviesRoutes from '../MoviesRoutes/MoviesRoutes';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <FilmRoutes />
+      <MoviesRoutes />
     </BrowserRouter>
   );
 };
