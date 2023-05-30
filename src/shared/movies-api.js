@@ -33,7 +33,7 @@ export const getTrendingMovies = async () => {
 export const getMovieByName = async query => {
   const path = '/search/movie';
   const { data } = await instance.get(path, {
-    params: { query: query }
+    params: { query: query },
   });
   const moviesList = data.results.map(({ id, name, title, poster_path }) => {
     let movieTitle = title || name;
@@ -46,4 +46,30 @@ export const getMovieByName = async query => {
     return { id, movieTitle, src };
   });
   return moviesList;
+};
+
+export const getMovieInfoById = async movieId => {
+  const path = `/movie/${movieId}`;
+  const { data } = await instance.get(path);
+
+  const { genres, title, poster_path, release_date, vote_average, overview } =
+    data;
+    console.log(data);
+
+  const movieTitle = title;
+  const posterPath = poster_path
+    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+    : 'https://via.placeholder.com/200x300';
+
+  return {
+    id: movieId,
+    movieTitle,
+    posterPath,
+    releaseYear: release_date.substr(0, 4),
+    voteAverage: `${(vote_average * 10).toFixed(0)}%`,
+    overview,
+    genres: genres.length
+      ? genres.map(item => item.name).join(', ')
+      : 'Oops!! Unknown genres.',
+  };
 };

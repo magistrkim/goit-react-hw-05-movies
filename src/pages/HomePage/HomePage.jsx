@@ -24,7 +24,7 @@ const HomePage = () => {
       {loading && <Loader />}
       {movies && (
         <>
-          <h1 className={css.title}>Trending today</h1>
+          <h2 className={css.title}>Top Movies</h2>
           <MoviesList data={movies} />
         </>
       )}

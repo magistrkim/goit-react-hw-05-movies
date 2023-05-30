@@ -18,6 +18,7 @@ const Searchbar = ({ onSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
     onSubmit(event);
+    setQuery('');
   };
 
   return (
