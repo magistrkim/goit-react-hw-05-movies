@@ -88,3 +88,15 @@ export const getMovieCast = async movieId => {
   });
   return cast;
 };
+
+export const getMovieReviews = async movieId => {
+  const path = `/movie/${movieId}/reviews`;
+  const { data } = await instance.get(path);
+  const reviews = data.results.map(({ author, id, content }) => ({
+    author,
+    id,
+    content,
+  }));
+
+  return reviews;
+};

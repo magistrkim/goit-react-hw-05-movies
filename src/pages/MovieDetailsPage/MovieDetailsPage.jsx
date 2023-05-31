@@ -10,6 +10,7 @@ const MovieDetailsPage = () => {
   const [loading, setLoading] = useState(false);
   const [expandedOverview, setExpandedOverview] = useState(false);
   const [castVisible, setCastVisible] = useState(false);
+  const [reviewsVisible, setReviewsVisible] = useState(false);
   const toggleOverview = () => {
     setExpandedOverview(!expandedOverview);
   };
@@ -79,8 +80,9 @@ const MovieDetailsPage = () => {
                     to="reviews"
                     className={css.link__add}
                     state={{ from: location.state?.from ?? '/' }}
+                    onClick={() => setReviewsVisible(!reviewsVisible)}
                   >
-                    Reviews
+                    {reviewsVisible ? 'Hide' : 'Reviews'}
                   </Link>
                 </li>
               </ul>
@@ -90,6 +92,7 @@ const MovieDetailsPage = () => {
       )}
       <Suspense fallback={<Loader />}>
         {castVisible && <Outlet />}
+        {reviewsVisible && <Outlet />}
       </Suspense>
     </>
   );

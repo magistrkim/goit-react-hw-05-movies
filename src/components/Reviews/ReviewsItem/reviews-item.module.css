@@ -1,0 +1,27 @@
+.item {
+    box-shadow: 0px 4px 4px 4px rgba(0, 185, 185, 0.649);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 10px;
+}
+.item:hover,
+.item:focus {
+    box-shadow: 0px 10px 10px 4px #fad283;
+}
+.title {
+    font-size: 16px;
+    color: #fad283;
+}
+.text {
+    font-size: 14px;
+}
+.expandLink {
+    margin-left: 10px;
+    color: rgb(0, 185, 185);
+    cursor: pointer;
+}
+.description {
+    text-align: center;
+    font-size: 16px;
+    color: #fad283;   
+}

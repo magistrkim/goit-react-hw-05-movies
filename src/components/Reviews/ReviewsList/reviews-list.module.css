@@ -1,0 +1,10 @@
+.list {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    gap: 40px;
+    padding: 0 20px;
+    margin-left: 120px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}

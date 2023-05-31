@@ -6,8 +6,6 @@ import Searchbar from 'components/Searchbar/Searchbar';
 import Loader from 'components/Loader/Loader';
 import MoviesList from 'components/MoviesList/MoviesList';
 
-// import css from './movies-page.module.css';
-
 const MoviesPage = () => {
   const [movies, setMovies] = useState(null);
   const [loading, setLoading] = useState(false);
