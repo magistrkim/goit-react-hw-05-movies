@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 300px;
     background-color:#fad283;
-    border-radius: 3px;
+    border-radius: 4px;
     overflow: hidden;
     margin-left: 40px;
     margin-top: 60px;
@@ -13,10 +13,11 @@
 .search__btn {
     display: inline-block;
     width: 36px;
-    height: 32px;
+    height: 30px;
     border: 0;
     background-image: url('/public/search.png');
-    background-size: 64%;
+    background-color:#fad283;
+    background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;

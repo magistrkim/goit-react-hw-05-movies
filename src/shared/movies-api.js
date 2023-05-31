@@ -54,16 +54,14 @@ export const getMovieInfoById = async movieId => {
 
   const { genres, title, poster_path, release_date, vote_average, overview } =
     data;
-    console.log(data);
 
-  const movieTitle = title;
   const posterPath = poster_path
     ? `https://image.tmdb.org/t/p/w500/${poster_path}`
     : 'https://via.placeholder.com/200x300';
 
   return {
     id: movieId,
-    movieTitle,
+    title,
     posterPath,
     releaseYear: release_date.substr(0, 4),
     voteAverage: `${(vote_average * 10).toFixed(0)}%`,
@@ -72,4 +70,21 @@ export const getMovieInfoById = async movieId => {
       ? genres.map(item => item.name).join(', ')
       : 'Oops!! Unknown genres.',
   };
+};
+
+export const getMovieCast = async movieId => {
+  const path = `/movie/${movieId}/credits`;
+  const { data } = await instance.get(path);
+  const cast = data.cast.map(({ name, character, id, profile_path }) => {
+    const src = profile_path
+      ? `https://image.tmdb.org/t/p/w500/${profile_path}`
+      : 'https://via.placeholder.com/200x300';
+    return {
+      name,
+      character,
+      id,
+      src,
+    };
+  });
+  return cast;
 };

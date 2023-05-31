@@ -55,7 +55,12 @@
 }
 .img {
     border: 2px dotted rgb(1, 128, 128);
-    width: 320px;
-    height: 460px;
+    width: 280px;
+    height: 420px;
     border-radius: 8px;
+}
+.expandLink {
+    margin-left: 10px;
+    color: rgb(0, 185, 185);
+    cursor: pointer;
 }
