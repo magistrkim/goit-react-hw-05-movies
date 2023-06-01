@@ -3,5 +3,14 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fill, 360px);
     gap: 40px;
-    padding: 0 120px 60px 120px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 80px 60px 80px;
+
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 0 120px 80px 120px;
+
+      }
 }

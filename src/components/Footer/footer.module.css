@@ -1,13 +1,18 @@
 .footer {
     box-sizing: border-box;
     min-height: 100px;
-    padding: 60px 120px 12px 120px;
+    padding: 40px 60px 12px 60px;
     color: #fff;
     background: linear-gradient(135deg, #201422, #1a061e);
     box-shadow: 8px 4px 8px 8px rgba(1, 223, 223, 0.519),
-      0px 6px 12px 10px rgba(255, 255, 255, 0.649), 0px 0px
+      0px 6px 12px 10px rgba(255, 255, 255, 0.649), 0px 0px;
+
+      @media screen and (min-width: 768px) {
+        padding: 60px 120px 12px 120px;
+      }
 }
 .link {
+    margin: 0 auto;
     display: block;
     width: 120px;
     text-align: center;
@@ -17,6 +22,9 @@
     color: #fad283;
     text-transform: uppercase;
     font-weight: 400;
+    @media screen and (max-width: 767.98px) {
+        margin-bottom: 20px;
+      }
 }
 .link:hover,
 .link:focus  {
@@ -24,11 +32,14 @@
     color: rgb(33, 32, 43);
 }
 .list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 40px;
+
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+      }
 }
 .text {
     text-align: center;

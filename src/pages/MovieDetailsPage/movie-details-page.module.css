@@ -1,8 +1,11 @@
 .wrapper {
-    max-height: 100vh;
-    display: flex;
-    padding: 40px 120px 120px 120px;
+    padding: 40px;
     background: linear-gradient(135deg, #1e191f, #2c0f31);
+    @media screen and (min-width: 768px) {
+        max-height: 100vh;
+        display: flex;
+        padding: 40px 120px 120px 120px;
+      }
 }
 .wrapper__info {
   max-width: 600px;  
@@ -10,10 +13,15 @@
   flex-direction: column;
   gap: 20px;
   padding-left: 32px;
+
+  @media screen and (max-width: 767.98px) {
+    padding: 0;
+    gap: 12px;
+  }
 }
 .link {
     margin-top: 40px;
-    margin-left: 120px;
+    margin-left: 40px;
     display: block;
     width: 80px;
     text-align: center;
@@ -23,6 +31,11 @@
     color: #fad283;
     text-transform: uppercase;
     font-weight: 400;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 40px;
+        margin-left: 120px;
+      }
 }
 .link__add {
     display: block;
@@ -34,6 +47,7 @@
     color: #fad283;
     text-transform: uppercase;
     font-weight: 400;
+
 }
 .link:hover,
 .link:focus ,
@@ -44,7 +58,12 @@
 }
 .title {
     color: #fad283;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 20px;
+      }
+    
 }
 .subtitle {
     color: rgb(0, 185, 185);
@@ -53,6 +72,10 @@
     display: flex;
     gap: 12px;
     padding: 8px 0;
+
+    @media screen and (max-width: 767.98px) {
+        justify-content: center;
+      }
 }
 .img {
     box-shadow: 0px 4px 4px 4px rgba(0, 185, 185, 0.649);
@@ -60,6 +83,13 @@
     height: 420px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    @media screen and (max-width: 767.98px) {
+        width: 100%;
+        height: 480px;
+        margin-bottom: 20px;
+      }
+
 }
 .expandLink {
     margin-left: 10px;
