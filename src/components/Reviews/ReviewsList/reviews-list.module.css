@@ -1,8 +1,8 @@
 .list {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 360px);
+    grid-template-rows: 160px;
     gap: 40px;
     padding: 0 120px 60px 120px;
-
 }
