@@ -20,7 +20,7 @@ const HomePage = () => {
       .finally(() => setLoading(false));
   }, []);
   return (
-    <>
+    <div className={css.wrapper}>
       {loading && <Loader />}
       {movies && (
         <>
@@ -28,7 +28,7 @@ const HomePage = () => {
           <MoviesList data={movies} />
         </>
       )}
-    </>
+    </div>
   );
 };
 

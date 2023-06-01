@@ -5,7 +5,7 @@ import { getMovieByName } from 'shared/movies-api';
 import Searchbar from 'components/Searchbar/Searchbar';
 import Loader from 'components/Loader/Loader';
 import MoviesList from 'components/MoviesList/MoviesList';
-import css from '../../components/Cast/CastItem/cast-item.module.css';
+import css from './movies-page.module.css';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState(null);
@@ -43,7 +43,7 @@ const MoviesPage = () => {
   };
 
   return (
-    <>
+    <div className={css.wrapper}>
       <Searchbar onSubmit={handleSubmit} />
       {loading && <Loader />}
       {movies && <MoviesList data={movies} />}
@@ -52,7 +52,7 @@ const MoviesPage = () => {
           There is no movies matching your request: "{searchValue}"
         </p>
       )}
-    </>
+    </div>
   );
 };
 
