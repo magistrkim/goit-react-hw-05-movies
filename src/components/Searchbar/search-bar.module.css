@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 300px;
-    background-color:#fad283;
+    max-width: 280px;
+    border: 1px dotted #fad283;
     border-radius: 4px;
     overflow: hidden;
     margin-left: 120px;
@@ -12,8 +12,8 @@
 }
 .search__btn {
     display: inline-block;
-    width: 36px;
-    height: 30px;
+    width: 40px;
+    height: 36px;
     border: 0;
     background-image: url('/public/search.png');
     background-color:#fad283;
@@ -36,7 +36,7 @@
 }
 .searchForm__input {
     padding-left: 10px;
-    background-color: #fad283;
+    background: linear-gradient(135deg, #1e191f, #221025);
     display: inline-flex;
     width: 100%;
     font: inherit;
@@ -44,10 +44,10 @@
     border: none;
     outline: none;
     padding: 2px 16px;
-    color: #0e0e52;
+    color: #ffffff;
 }
 .searchForm__input::placeholder {
     font: inherit;
     font-size: 18px;
-    color: #455e70;
+    color:#fad283;
 }
