@@ -1,5 +1,5 @@
 .list {
-    min-height: 600px;
+    min-height: 300px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px);
     gap: 40px;

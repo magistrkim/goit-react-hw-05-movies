@@ -1,7 +1,6 @@
 .wrapper {
     display: flex;
-    margin-left: 120px;
-    margin-top: 40px;
+    padding: 40px 120px;
 }
 .wrapper__info {
   max-width: 600px;  
