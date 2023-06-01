@@ -23,9 +23,9 @@ const CastItem = ({ data: { src, name, character } }) => {
 export default CastItem;
 
 CastItem.propTypes = {
-    data: PropTypes.shape({
-      src: PropTypes.string,
-      name: PropTypes.string.isRequired,
-      character: PropTypes.string.isRequired,
-    }).isRequired,
-  };
+  data: PropTypes.shape({
+    src: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
+  }).isRequired,
+};

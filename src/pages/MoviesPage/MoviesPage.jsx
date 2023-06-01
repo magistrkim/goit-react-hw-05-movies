@@ -5,6 +5,7 @@ import { getMovieByName } from 'shared/movies-api';
 import Searchbar from 'components/Searchbar/Searchbar';
 import Loader from 'components/Loader/Loader';
 import MoviesList from 'components/MoviesList/MoviesList';
+import css from '../../components/Cast/CastItem/cast-item.module.css';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState(null);
@@ -31,9 +32,7 @@ const MoviesPage = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    const inputValue = event.target.elements.search.value
-      .trim()
-      .toLowerCase();
+    const inputValue = event.target.elements.search.value.trim().toLowerCase();
 
     if (inputValue === '') {
       Notify.warn('Please, enter movie title.');
@@ -49,7 +48,9 @@ const MoviesPage = () => {
       {loading && <Loader />}
       {movies && <MoviesList data={movies} />}
       {movies?.length === 0 && (
-        <p>There is no movies matching your request: "{searchValue}"</p>
+        <p className={css.title}>
+          There is no movies matching your request: "{searchValue}"
+        </p>
       )}
     </>
   );

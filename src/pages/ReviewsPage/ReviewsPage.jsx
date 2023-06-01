@@ -4,7 +4,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getMovieReviews } from 'shared/movies-api';
 import Loader from 'components/Loader/Loader';
 import ReviewList from 'components/Reviews/ReviewsList/ReviewsList';
-import css from '../../components/Reviews/ReviewsItem/reviews-item.module.css'
+import css from '../../components/Reviews/ReviewsItem/reviews-item.module.css';
 
 const ReviewsPage = () => {
   const [reviews, setReviews] = useState(null);
@@ -22,14 +22,16 @@ const ReviewsPage = () => {
   }, [movieId]);
 
   return (
-  <>
-    {loading && <Loader />}
-    {reviews?.length === 0 && (
-      <p className={css.description}>There is no information about this movie.</p>
-    )}
-    {reviews && <ReviewList data={reviews} />}
-  </>
-  )
+    <>
+      {loading && <Loader />}
+      {reviews?.length === 0 && (
+        <p className={css.description}>
+          There is no information about this movie.
+        </p>
+      )}
+      {reviews && <ReviewList data={reviews} />}
+    </>
+  );
 };
 
 export default ReviewsPage;
