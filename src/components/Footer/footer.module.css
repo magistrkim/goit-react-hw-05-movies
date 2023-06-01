@@ -33,5 +33,11 @@
 .text {
     text-align: center;
     font-size: 14px;
-    color: rgb(62, 112, 112);
+    color: rgb(79, 141, 141);
+}
+.logo {
+    color: #ffffff;
+}
+.logo__text {
+    color: #ec7c26;
 }

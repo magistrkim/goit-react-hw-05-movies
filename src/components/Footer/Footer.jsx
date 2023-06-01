@@ -36,7 +36,18 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p className={css.text}>All rights reserved. &copy; Nataliya Kim 2023</p>
+      <p className={css.text}>
+        All rights reserved. &copy; Nataliya Kim with{' '}
+        <a
+          href="https://goit.global/ua/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Goit link"
+        >
+          <span className={css.logo}>Go</span>
+          <span className={css.logo__text}>IT</span> 2023
+        </a>
+      </p>
     </footer>
   );
 };
