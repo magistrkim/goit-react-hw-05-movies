@@ -4,7 +4,7 @@ import MoviesRoutes from '../MoviesRoutes/MoviesRoutes';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Navbar />
       <MoviesRoutes />
     </BrowserRouter>
