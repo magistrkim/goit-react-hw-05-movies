@@ -29,9 +29,7 @@ const Footer = () => {
         <li className={css.item}>
           <a
             href="tel:+380976686033"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="linkedIn link"
+            aria-label="phone number"
             className={css.link}
           >
             +380976686033
