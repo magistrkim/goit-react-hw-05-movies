@@ -3,7 +3,7 @@
     box-shadow: 0px 4px 4px 4px rgba(0, 185, 185, 0.649);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    padding: 10px;
+    padding: 16px;
 }
 .item:hover,
 .item:focus {
