@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
-    padding: 40px 120px;
-    min-height: 100vh;
+    padding: 40px 120px 120px 120px;
+    background: linear-gradient(135deg, #1e191f, #2c0f31);
 }
 .wrapper__info {
   max-width: 600px;  

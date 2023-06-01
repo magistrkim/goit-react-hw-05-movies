@@ -1,0 +1,36 @@
+.footer {
+    min-height: 100px;
+    padding: 60px 120px 12px 120px;
+    color: #fff;
+    background: linear-gradient(135deg, #201422, #1a061e);
+    box-shadow: 8px 4px 8px 8px rgba(1, 223, 223, 0.519),
+      0px 6px 12px 10px rgba(255, 255, 255, 0.649), 0px 0px
+}
+.link {
+    display: block;
+    width: 120px;
+    text-align: center;
+    padding: 8px 20px;
+    border: 1px dotted #fad283;
+    border-radius: 8px;
+    color: #fad283;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.link:hover,
+.link:focus  {
+    background-color:  #fad283;
+    color: rgb(33, 32, 43);
+}
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+.text {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(62, 112, 112);
+}
