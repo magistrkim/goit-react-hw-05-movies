@@ -10,6 +10,7 @@ const CastPage = () => {
   const [cast, setCast] = useState(null);
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -21,6 +22,28 @@ const CastPage = () => {
       .finally(() => setLoading(false));
   }, [movieId]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       {loading && <Loader />}
@@ -28,6 +51,11 @@ const CastPage = () => {
         <p className={css.title}>There is no information about this movie.</p>
       )}
       {cast && <CastList data={cast} />}
+      {showScrollButton && (
+      <button className= {css.scroll__up} onClick={handleScrollToTop}>
+         UP
+        </button>
+      )}
     </>
   );
 };
